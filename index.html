@@ -85,6 +85,10 @@
               <!-- Local TOC -->
               <div class="local-toc"><ul>
 <li><a class="reference internal" href="#">Welcome to Myswnotes’s documentation!</a></li>
+<li><a class="reference internal" href="#sphinx">SPHINX</a><ul>
+<li><a class="reference internal" href="#references">References:</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
 </ul>
 </div>
@@ -156,6 +160,50 @@
   <div class="section" id="welcome-to-myswnotes-s-documentation">
 <h1>Welcome to Myswnotes’s documentation!<a class="headerlink" href="#welcome-to-myswnotes-s-documentation" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
+</div>
+</div>
+<div class="section" id="sphinx">
+<h1>SPHINX<a class="headerlink" href="#sphinx" title="Permalink to this headline">¶</a></h1>
+<p>Sphinx is a useful too to create good-looking documentation pages.</p>
+<p>In this documentation, I will explain how to install sphinx with “Read
+the docs (RTD) theme”. Here is the main idea.</p>
+<ul class="simple">
+<li><p>Install sphinx.</p></li>
+<li><p>Instal RTD theme.</p></li>
+<li><p>configure your conf.py file to use RTD theme.</p></li>
+<li><p>Prepare your documentation in .rst format and put those files into
+your /docs/source directory</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code> to export those files into html. Remember to edit
+the index.rst file for table of contents.</p></li>
+<li><p>Then either you may transfer those files to your web-page.</p></li>
+<li><p>If you want your pages to be published via github-pages, you may
+create a repository first. Make the main branch as your regular
+sphinx folder. Then you add a branch for the content to be published
+in github-pages.</p></li>
+<li><p>Whenever you edit your rst files you will run <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code> code to
+obtain the html files. Then push the content of the folders to the</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## Connect to 172.16.0.200 with your browser and enter your truba username and passwd</span>
+<span class="mf">172.16</span><span class="o">.</span><span class="mf">0.200</span>
+</pre></div>
+</div>
+<div class="section" id="references">
+<h2>References:<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/">Main sphinx page</a></p></li>
+<li><p><a class="reference external" href="https://sphinx-themes.org/">https://sphinx-themes.org/</a> Themes-preview for the sphinx</p>
+<ul>
+<li><p>html<sub>theme</sub> = ‘alabaster’</p></li>
+<li><p>html<sub>theme</sub> = “sphinx<sub>rtdtheme</sub>”</p></li>
+<li><p>html<sub>theme</sub> = “faculty-sphinx-theme”</p></li>
+<li><p>html<sub>theme</sub> = “jupyter-sphinx-theme”</p></li>
+<li><p>html<sub>theme</sub> = “bootstrap-limix</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://rantzen.net/2020/02/tutorial--using-sphinx-clever-with-github-pages/">Good info for creating script to automize the
+process</a></p></li>
+<li><p><a class="reference external" href="https://daler.github.io/sphinxdoc-test/includeme.html">https://daler.github.io/sphinxdoc-test/includeme.html</a></p></li>
+</ul>
 </div>
 </div>
 <div class="section" id="indices-and-tables">
