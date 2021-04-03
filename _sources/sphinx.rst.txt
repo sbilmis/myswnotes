@@ -1,0 +1,75 @@
+.. raw:: org
+
+   #+SETUPFILE:~/Dropbox/my_depo/emacs_depo/.emacs.d/org-templates/level-elab.org
+
+.. raw:: org
+
+   #+STARTUP: hidestars
+
+.. raw:: org
+
+   #+TAGS: SOFTWARE(s) URGENT(u) EMACS(e) ORG-MODE(o) PYTHON(p) QUESTIONS(q)
+
+==== ======= =====
+HOME Ulakbim MyWeb
+==== ======= =====
+==== ======= =====
+
+-  All the notes related to anything should be in organized in notes.org
+   file.
+-  All the notes in the Evernote should be considered as temporary
+-  All the software tutorials should be saved under the folder
+   **/Users/sbilmis/work/Cs** and be synced to gitlab
+-  FeynCalc and FeynArts example file is located in
+   Icloud/Work/cookbooks (Better to reorganize)
+
++------+----------------+----------------+-----------+----------------+
+| HOME | `TODO <        | `Study         | belle.org | `Voca          |
+|      | ./todo.org>`__ | Notes <.       |           | bulary <./voca |
+|      |                | /notes.org>`__ |           | bulary.org>`__ |
++======+================+================+===========+================+
++------+----------------+----------------+-----------+----------------+
+
+SPHINX
+======
+
+Sphinx is a useful too to create good-looking documentation pages.
+
+In this documentation, I will explain how to install sphinx with "Read
+the docs (RTD) theme". Here is the main idea.
+
+-  Install sphinx.
+-  Instal RTD theme.
+-  configure your conf.py file to use RTD theme.
+-  Prepare your documentation in .rst format and put those files into
+   your /docs/source directory
+-  Run ``make html`` to export those files into html. Remember to edit
+   the index.rst file for table of contents.
+-  Then either you may transfer those files to your web-page.
+-  If you want your pages to be published via github-pages, you may
+   create a repository first. Make the main branch as your regular
+   sphinx folder. Then you add a branch for the content to be published
+   in github-pages.
+-  Whenever you edit your rst files you will run ``make html`` code to
+   obtain the html files. Then push the content of the folders to the
+
+::
+
+   ## Connect to 172.16.0.200 with your browser and enter your truba username and passwd
+   172.16.0.200
+
+References:
+-----------
+
+-  `Main sphinx page <https://www.sphinx-doc.org/en/master/>`__
+-  https://sphinx-themes.org/ Themes-preview for the sphinx
+
+   -  html\ :sub:`theme` = 'alabaster'
+   -  html\ :sub:`theme` = "sphinx\ :sub:`rtdtheme`"
+   -  html\ :sub:`theme` = "faculty-sphinx-theme"
+   -  html\ :sub:`theme` = "jupyter-sphinx-theme"
+   -  html\ :sub:`theme` = "bootstrap-limix
+
+-  `Good info for creating script to automize the
+   process <https://rantzen.net/2020/02/tutorial--using-sphinx-clever-with-github-pages/>`__
+-  https://daler.github.io/sphinxdoc-test/includeme.html
