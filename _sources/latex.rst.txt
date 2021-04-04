@@ -1,0 +1,699 @@
+==============
+Software Notes
+==============
+
+    :Author: sbilmis
+
+.. contents::
+
+1 LateX
+-------
+
+1.1 How to List of all the Figures included in a document?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+A list of all the figures included in a document can be generated with the following command 
+
+::
+
+    \listoffigures
+
+1.2 How to use subfigures in Latex? (Figures side by side)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code:: tex
+
+    \documentclass{article}
+
+    \usepackage{graphicx}
+    \usepackage{caption}
+    \usepackage{subcaption}
+
+    \begin{document}
+
+    \begin{figure}
+    	\centering
+    	\begin{subfigure}{0.4\textwidth} % width of left subfigure
+    		\includegraphics[width=\textwidth]{rncalt.png}
+    		\caption{RNC} % subcaption
+    	\end{subfigure}
+    	\vspace{1em} % here you can insert horizontal or vertical space
+    	\begin{subfigure}{0.4\textwidth} % width of right subfigure
+    		\includegraphics[width=\textwidth]{dncalt.png}
+    		\caption{DNC} % subcaption
+    	\end{subfigure}
+    	\caption{Wordcloud of national conventions} % caption for whole figure
+    \end{figure}
+
+    \end{document}
+
+1.3 How can I change the spacing in my LaTeX document?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+::
+
+    \usepackage{setspace}
+    \doublespacing
+    \onehalfspacing
+
+    \begin{singlespace}
+    \end{singlespace}
+
+You can also set the spacing to be something other than doublespaced; for
+example, if you wanted to have one-and-a-quarter spacing between lines,
+use the line
+
+``\setstretch{1.25}``
+
+1.4 Equation Numbering in LaTeX
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You can also use the \label and \ref (or \eqref from the amsmath package) commands to label and reference equations, respectively. For equation number 1, \ref results in 1, and \eqref results in (1).
+
+1.5 How to list bibliography items without giving reference in text?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This is especially useful if you want to create just a publication list.
+
+``\nocite{*}`` is used for this.
+
+::
+
+    \documentclass{article}
+    \nocite{*}
+    \begin{document}
+    \bibliographystyle{alpha}
+    \bibliography{bibfile}
+    \end{document}
+
+1.6 How to write equation over two pages in LateX
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Add this in the preamble after loading amsmath
+
+``\allowdisplaybreaks``
+
+::
+
+    \usepackage{amsmath}
+    \allowdisplaybreaks
+
+Note that using ``\align*`` environment is necessary for allowing displaybreak. It may not function for split environment for instance.
+
+.. VERBATIM::
+
+    Certain equation environments wrap their contents in an unbreakable box, with the consequence that neither \displaybreak nor  \allowdisplaybreaks will have any effect on them. These include split,  aligned, gathered, and alignedat.
+
+`https://tex.stackexchange.com/questions/42720/long-equation-does-not-page-break <https://tex.stackexchange.com/questions/42720/long-equation-does-not-page-break>`_
+
+1.7 How to Write piecewise function in LateX
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Piecewise function can be written using the {amsmath} package as follows;
+
+.. code:: tex
+
+    \usepackage{amsmath}
+    ...
+    ...
+    $$
+    f(n) =
+    \begin{cases}
+    n/2, & \text{if }n\text{ is even} \\
+    3n+1, & \text{if }n\text{ is odd}
+    \end{cases}
+    $$
+
+This will be shown as;
+.. image:: img/piecewise.png
+
+`(This note is adapted from here <https://sefak.wordpress.com/2010/04/16/latex-piecewise-function/>`_)
+
+1.8 Font Size in Latex
+~~~~~~~~~~~~~~~~~~~~~~
+
+(Useful especially in caption of figures if that does not fit to the page.) 
+
+The font changing commands are often determined by the document class itself. For the standard classes (with size options in the first row), the values are as follows:
+
+.. table::
+
+    +---------------+-------+-------+-------+
+    | Command       |  10pt |  11pt |  12pt |
+    +---------------+-------+-------+-------+
+    | \tiny         |     5 |     6 |     6 |
+    +---------------+-------+-------+-------+
+    | \scriptsize   |     7 |     8 |     8 |
+    +---------------+-------+-------+-------+
+    | \footnotesize |     8 |     9 |    10 |
+    +---------------+-------+-------+-------+
+    | \small        |     9 |    10 | 10.95 |
+    +---------------+-------+-------+-------+
+    | \normalsize   |    10 | 10.95 |    12 |
+    +---------------+-------+-------+-------+
+    | \large        |    12 |    12 |  14.4 |
+    +---------------+-------+-------+-------+
+    | \Large        |  14.4 |  14.4 | 17.28 |
+    +---------------+-------+-------+-------+
+    | \LARGE        | 17.28 | 17.28 | 20.74 |
+    +---------------+-------+-------+-------+
+    | \huge         | 20.74 | 20.74 | 24.88 |
+    +---------------+-------+-------+-------+
+    | \Huge         | 24.88 | 24.88 | 24.88 |
+    +---------------+-------+-------+-------+
+
+(`This information is adapted from here <http://tex.stackexchange.com/questions/24599/what-point-pt-font-size-are-large-etc>`_)
+
+1.9 Lagrangian symbol in LateX
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+``\usepackage{amssymb}`` 
+``$\mathcal{L}$``
+
+1.10 Dirac Slashed Notation in LateX
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code:: tex
+
+    \usepackage{amsmath}
+    \usepackage{slashed}
+    $\slashed{p}$
+
+1.11 Easy way to get any symbol in LateX
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Detexify is a useful webpage in which you draw the symbol with your mouse and it gives you the LateX code. Give it a try.
+
+`Detexify <http://detexify.kirelabs.org/classify.html>`_
+
+1.12 Parantheses With Different Sizes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+``( \big( \Big( \bigg( \Bigg(``
+
+will produce the output;
+
+\begin{equation}
+( \big( \Big( \bigg( \Bigg( \nonumber
+\end{equation}
+
+
+`This information is adapted from here. <http://tex.stackexchange.com/questions/38868/big-parenthesis-in-an-equation>`_
+
+1.13 How to Suppress page number in LateX?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Use
+
+``\pagenumbering{gobble}``
+to switch off page numbering.
+
+To switch it on afterwards, use
+
+``\pagenumbering{arabic}``
+for arabic numbers
+
+``\pagenumbering{alph}``
+for lowercase alphabetic
+
+``\pagenumbering{Alph}``
+for uppercase alphabetic
+
+``\pagenumbering{roman}``
+for Roman numbering 
+
+`This information is adapted from here. <http://tex.stackexchange.com/questions/7355/how-to-suppress-page-number>`_
+
+1.14 How to Set Width and Height For An Image
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Use "keepaspectratio"
+
+``\usepackage{graphicx}``
+...
+
+``\includegraphics[width=2cm,height=3cm,keepaspectratio]{./graphics/amato}``
+
+``\includegraphics[width=2cm,height=3cm,keepaspectratio]{./graphics/cardtrick}``
+
+`This information is adapted from here. <http://tex.stackexchange.com/questions/47245/set-a-maximum-width-and-height-for-an-image>`_
+
+1.15 How to create a table with fixed width in Latex?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In default tabular environment, every column get the width they need. This could lead to extra wide tables or to a bad looking if the width differs between the rows. Use p-parameter of the tabular environment.
+
+\begin{tabular}{|p{1cm}|p{2cm}|p{3cm}|}
+\hline
+1 cm width & 2 cm width & 3 cm width \\
+\hline
+test 1 & test 2 & test 3\\
+\hline
+\end{tabular}
+
+This code will be shown as;
+
+`This note is adapted from here. <http://www.sascha-frank.com/Faq/tables_six.html>`_
+
+1.16 Hyperlinks
+~~~~~~~~~~~~~~~
+
+One must be careful when importing hyperref. Usually it has to be the last package to be imported, but there might be some exceptions to this rule.
+
+``\usepackage{hyperref}``
+
+**Styles and Colors**
+
+.. code:: tex
+
+    \usepackage{hyperref}
+    \hypersetup{
+        colorlinks=true,
+        linkcolor=blue,
+        filecolor=magenta,      
+        urlcolor=cyan,
+    }
+
+Below example is adapted from `here <https://www.sharelatex.com/learn/Hyperlinks>`_
+
+.. code:: tex
+
+    \documentclass{book}
+    \usepackage[utf8]{inputenc}
+    \usepackage[english]{babel}
+
+    \usepackage{hyperref}
+    \hypersetup{
+        colorlinks=true,
+        linkcolor=blue,
+        filecolor=magenta,      
+        urlcolor=cyan,
+    }
+
+    \urlstyle{same}
+
+    \begin{document}
+
+    \tableofcontents
+
+    \chapter{First Chapter}
+
+    This will be an empty chapter and I will put some text here
+
+    \begin{equation}
+    \label{eq:1}
+    \sum_{i=0}^{\infty} a_i x^i
+    \end{equation}
+
+    The equation \ref{eq:1} shows a sum that is divergent. This formula 
+    will be latter used in the page \pageref{second}.
+
+    For further references see \href{http://www.sharelatex.com}{Something 
+    Linky} or go to the next url: \url{http://www.sharelatex.com} or open 
+    the next file \href{run:./file.txt}{File.txt}
+
+    It's also possible to link directly any word or 
+    \hyperlink{thesentence}{any sentence} in you document.
+
+    If you read this text, you will get noinformation.  Really?  Is there 
+    no information?  Is there a diㄦence between thistext and some nonsense 
+    like Huardest gefburn"?  Kjift { not at all!
+
+    For instance \hypertarget{thesentence}{this sentence}.
+
+1.17 How to Align Text
+~~~~~~~~~~~~~~~~~~~~~~
+
+For horizontal alignment use ``\flushleft`` or ``flushright``. 
+
+.. code:: tex
+
+    \begin{flushleft}
+    text
+    ....
+    \end{flushleft}
+
+Although ``\hfill`` is not preferrable it can be used also. However, ``\hfill`` that occurs at the start of aline will be ignored.
+To avoid this use following instead of ``\hfill``.
+
+``\null\hfill``
+
+1.18 How to write Chemical Symbols in LateX
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Using mchem package is a better way to write chemical symbols.
+
+``\usepackage{mchem}``
+
+.. code:: LATEX
+
+    \documentclass{article}
+    \usepackage[version=3]{mhchem}
+    \parskip=0.1in
+    \begin{document}
+
+    \ce{SO4^2-}
+
+    \ce{^{227}_{90}Th+}
+
+    \ce{A\bond{-}B\bond{=}C\bond{#}D}
+
+    \ce{CO2 + C -> 2CO}
+
+    \ce{SO4^2- + Ba^2+ -> BaSO4 v}
+
+    \end{document}
+
+Adapted from `https://www.johndcook.com/blog/2010/12/08/typesetting-chemistry-in-latex/ <https://www.johndcook.com/blog/2010/12/08/typesetting-chemistry-in-latex/>`_ 
+
+1.19 How to write vector symbol on letters
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code:: LATEX
+
+    \vec{A}
+
+1.20 How to Define Master File in Latex? (Emacs-Auctex)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This is useful if you are dealing with large tex files, including chapters, sections seperately. You can compile directly within each chapter, section once you define the Master file. 
+
+A quote from the manual;
+
+"You may wish to spread a document over many files (as you are likely to do if there are multiple authors, or if you have not yet discovered the power of the outline commands). This can be done by having a “master” file in which you include the various files with the TeX macro ‘\input’ or the LaTeX macro ‘\include’. These files may also include other files themselves. However, to format the document you must run the commands on the top level master file." 
+
+
+------------
+
+When you create a new file AUCTeX will ask you about the "master" document for it. 
+
+(If it does not ask. you can call it with the following key-binding; 
+
+C-c \_ runs the command TeX-master-file-ask, which is an interactive
+compiled Lisp function in \`tex.el'.
+
+It is bound to C-c \_, <menu-bar> <LaTeX> <Multifile/Parsing> <Set
+Master File>.
+
+(TeX-master-file-ask)
+
+Ask for master file, set \`TeX-master' and add local variables.
+)
+
+
+If you define a master, C-c C-c will compile the master instead of the currently open file.
+
+AUCTeX keeps track of this by adding a footer with the information it needs. Assuming you have a master document index.tex, the footer would look like this:
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "index"
+%%% End: 
+
+Check:
+
+`http://stackoverflow.com/questions/2199463/emacs-auctex-run-command-on-file-that-is-not-currently-open <http://stackoverflow.com/questions/2199463/emacs-auctex-run-command-on-file-that-is-not-currently-open>`_
+
+`https://www.gnu.org/software/auctex/manual/auctex/Multifile.html <https://www.gnu.org/software/auctex/manual/auctex/Multifile.html>`_
+
+1.21 How to create title without date?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you want a blank date, just use \date{}.
+
+\title{aa}
+\author{bb}
+\date{}
+\maketitle
+
+1.22 How to give Links (Hyperref)?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code:: tex
+
+
+    \usepackage{hyperref}
+    \hypersetup{
+        colorlinks=true,
+        linkcolor=blue,
+        filecolor=magenta,      
+        urlcolor=cyan,
+    }
+    \urlstyle{same}
+
+    \begin{document}
+    ...
+    For further references see \href{http://www.sharelatex.com}{Something 
+    Linky} or go to the next url: \url{http://www.sharelatex.com} or open 
+    the next file \href{run:./file.txt}{File.txt}
+
+    It's also possible to link directly any word or 
+    \hyperlink{thesentence}{any sentence} in you document.
+
+    If you read this text, you will get noinformation.  Really?  Is there 
+    no information?  Is there a diㄦence between thistext and some nonsense 
+    like Huardest gefburn"?  Kjift { not at all!
+
+    For instance \hypertarget{thesentence}{this sentence}.
+    ...
+    \end{document}
+
+
+\hypersetup{ ... }
+    This will set the options to configure the behaviour of the links within the document. Every parameter must be comma-separated and the syntax must be in the forma parameter=value. 
+
+\colorlinks=true
+    Links will be coloured, the default colour is red. 
+
+\linkcolor=blue
+    Internal links, those generated by cross-referenced elements, are displayed in blue. 
+
+\filecolor=magenta
+    Links to local files will be shown in magenta colour (see linking local files). 
+
+\urlcolor=cyan
+    Links to web sites are set to cyan colour (see linking web addresses). 
+
+\urlstyle{same}
+    Default settings print links in mono-style spaced fonts, this command changes that and displays the links in the same style as the rest of the text. 
+
+Check:
+This information is adapted from `https://www.sharelatex.com/learn/Hyperlinks <https://www.sharelatex.com/learn/Hyperlinks>`_ 
+
+1.23 How to Choose Times New Roman Font in Latex?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Compile with XeLaTeX or LuaLaTeX, and use:
+
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+
+This is true Times New Roman, via modern TeX engines.
+
+Adopted from `http://tex.stackexchange.com/questions/67768/times-new-roman-font <http://tex.stackexchange.com/questions/67768/times-new-roman-font>`_
+
+1.24 How to Write Chemical Symbols in Latex?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Using the mhchem package, chemical symbols can be written easily. For instance, sulfate would be written as ce{SO4\ :sup:`2`\-}.
+
+\usepackage[version=3]{mhchem}
+
+1.24.1 Examples
+^^^^^^^^^^^^^^^
+
+\ce{SO4^2-}
+
+\ce{\ :sup:`227`\ \ :sub:`90`\Th+}
+
+\ce{A\bond{-}B\bond{=}C\bond{#}D}
+
+\ce{CO2 + C -> 2CO}
+
+\ce{SO4^2- + Ba^2+ -> BaSO4 v}
+
+1.24.2 Adopted from
+^^^^^^^^^^^^^^^^^^^
+
+`https://www.ctan.org/pkg/mhchem?lang=en <https://www.ctan.org/pkg/mhchem?lang=en>`_
+`http://www.johndcook.com/blog/2010/12/08/typesetting-chemistry-in-latex/ <http://www.johndcook.com/blog/2010/12/08/typesetting-chemistry-in-latex/>`_
+
+1.25 How to Write quotations at the beginning of the chapters?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+There are some different ways;
+
+1.25.1 epigraph
+^^^^^^^^^^^^^^^
+
+Some authors like to write quotations at the beginning of a chapter, these quotations are known as epigraphs. The epigraph package provides a vast set of options to typeset the epigraphs and epigraphs lists.
+
+
+The package is imported by
+
+\usepackage{epigraph}
+
+
+Then the quotation is typed with the command \epigraph{}{} whose first parameter is the quotation itself and the second parameter is the quotations source (author, book, etc.)
+
+This package can handle several quotations by means of a special environment and also has many customization options. 
+
+1.25.1.1 Example
+::::::::::::::::
+
+\documentclass{book}
+\usepackage[utf8]{inputenc}
+
+\usepackage{epigraph}
+
+...
+
+\chapter{Something}
+
+\epigraph{All human things are subject to decay, and when fate 
+summons, Monarchs must obey}{\textit{Mac Flecknoe \\ John Dryden}}
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit...
+
+1.25.2 fancychapters
+^^^^^^^^^^^^^^^^^^^^
+
+There's another package to typeset epigraphs or quotations at the beginning of each chapter, fancychapters. This package provides a new command to define chapter titles: 
+for this package to work, the first line in the document must be
+
+\documentstyle[fancychapters]{report}
+
+
+The type book can also be set instead of report.
+
+The command \Chapter takes two parameters inside braces. The first one is the quote to by printed on top of the title, the second one is the chapter title. There's and additional optional parameter inside brackets that corresponds to the optional parameter of the regular \chapter command.
+
+This package only works on books and reports. Even though the package works fine and automatically computes the width and height of the quotation and the chapter title, it seems that it's not longer maintained. 
+
+1.25.2.1 Example
+::::::::::::::::
+
+\documentstyle[fancychapters]{report}
+
+\begin{document}
+\Chapter{
+    \`\`Parents of young organic life forms should be warned, that
+towels can be harmful, if swallowed in large quantities.''
+\\\\[5pt]
+\rightline{{\rm --- Douglas Adams}}
+}[No More]{Building No More Operating Systems}
+
+1.25.3 quotchap
+^^^^^^^^^^^^^^^
+
+The package quotechap is somehow similar to fancychapters but more complex. It redefines the commands chapter and its starred version to reformat them, you can even change the colour of the chapter number with this package. Also, provides a special environment to typeset quotations and the corresponding authors. 
+
+The package is imported by the command
+
+\usepackage{quotchap}
+
+
+then, inside the environment savequote the quotes are typed. The parameter inside brackets, 45mm, sets the width of the quotation area. After each quote the command \qauthor{} is used to typeset and format the author's name. 
+
+1.25.3.1 Example
+::::::::::::::::
+
+\documentclass{book}
+\usepackage[utf8]{inputenc}
+
+\usepackage{quotchap}
+
+\begin{document}
+\begin{savequote}[45mm]
+---When shall we three meet again
+in thunder, lightning, or in rain?
+---When the hurlyburly’s done,
+when the battle’s lost and won.
+\qauthor{Shakespeare, Macbeth}
+Cookies! Give me some cookies!
+\qauthor{Cookie Monster}
+\end{savequote}
+\chapter{Classic Sesame Street}
+\end{document}
+
+1.25.4 The information is adopted from `https://www.sharelatex.com/learn/Typesetting_quotations <https://www.sharelatex.com/learn/Typesetting_quotations>`_
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1.26 How to refer to the Figures, Tables, Equations etc..
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Since you can use exactly the same commands to reference almost anything, you might get a bit confused after you have introduced a lot of references. It is common practice among LaTeX users to add a few letters to the label to describe what you are referencing. Some packages, such as fancyref, rely on this meta information. Here is an example:
+
+ch: 	chapter
+sec: 	section
+subsec: 	subsection
+fig: 	figure
+tab: 	table
+eq: 	equation
+lst: 	code listing
+itm: 	enumerated list item
+alg: 	algorithm
+app: 	appendix subsection
+
+Note: When a label is declared within a float environment, the \ref{...} will return the respective fig/table number, but it must occur after the caption. When declared outside, it will give the section number. To be completely safe, the label for any picture or table can go within the \caption{} command, as in
+
+\caption{Close-up of a gull\label{fig:gull}}
+
+1.26.1 Adopted from `https://en.wikibooks.org/wiki/LaTeX/Labels_and_Cross-referencing <https://en.wikibooks.org/wiki/LaTeX/Labels_and_Cross-referencing>`_
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1.27 How to Use Times New Roman Fonts in Latex?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+
+Note that for this to work, you need to compile with LuaLatex or XeLateX
+
+1.28 Latex Line and Page Breaking
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The first thing LaTeX does when processing ordinary text is to translate your input file into a string of glyphs and spaces. To produce a printed document, this string must be broken into lines, and these lines must be broken into pages. In some environments, you do the line breaking yourself with the \\\\ command, but LaTeX usually does it for you. The available commands are
+
+\\\\ start a new paragraph.
+\\\\\* start a new line but not a new paragraph.
+\\- OK to hyphenate a word here.
+\cleardoublepage flush all material and start a new page, start new odd numbered page.
+\clearpage plush all material and start a new page.
+\hyphenation enter a sequence pf exceptional hyphenations.
+\linebreak allow to break the line here.
+\newline request a new line.
+\newpage request a new page.
+\nolinebreak no line break should happen here.
+\nopagebreak no page break should happen here.
+\pagebreak encourage page break. 
+
+Information is adapted from `http://www.personal.ceu.hu/tex/breaking.htm <http://www.personal.ceu.hu/tex/breaking.htm>`_.
+
+1.29 Putting Figures Side-By-Side Using Minipage
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The minipage is often used to put things next to each other, which can otherwise be hard put together. For example, two pictures side by side, two tables next to a text or a picture or vice versa. The idea behind the minipage command is that within an existing page "built in" an additional page. By this one has the opportunity to use this new page, for example, set two pictures side by side, then just set two minipages side by side. Here than in Figure 1 is set in the first and Figure 2 in the second minipage.
+
+A mistake that is often made is, there is a blank line between the \end{minipage} and \begin{minipage} left. Then the pages are no longer together.
+
+1.29.1 Examples
+^^^^^^^^^^^^^^^
+
+Put three pictures side by side, where you should set the width of the image using width = \textwidth, if they are too wide.
+
+With minipage also text can be put next to an image, this also can be implemented by the usepackage sidecap. 
+
+Two tables next to each other: 
+
+Two figures side by side another example.
+
+1.29.2 References:
+^^^^^^^^^^^^^^^^^^
+
+`http://www.sascha-frank.com/latex-minipage.html <http://www.sascha-frank.com/latex-minipage.html>`_
+
+1.30 Use Cleveref for giving references to multiple figures
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Check this website `https://texblog.org/2013/05/06/cleveref-a-clever-way-to-reference-in-latex/ <https://texblog.org/2013/05/06/cleveref-a-clever-way-to-reference-in-latex/>`_

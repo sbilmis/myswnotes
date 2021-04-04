@@ -1,0 +1,926 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Software Notes &mdash; test 0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> test
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Software Notes</a><ul>
+<li><a class="reference internal" href="#latex">1 LateX</a><ul>
+<li><a class="reference internal" href="#how-to-list-of-all-the-figures-included-in-a-document">1.1 How to List of all the Figures included in a document?</a></li>
+<li><a class="reference internal" href="#how-to-use-subfigures-in-latex-figures-side-by-side">1.2 How to use subfigures in Latex? (Figures side by side)</a></li>
+<li><a class="reference internal" href="#how-can-i-change-the-spacing-in-my-latex-document">1.3 How can I change the spacing in my LaTeX document?</a></li>
+<li><a class="reference internal" href="#equation-numbering-in-latex">1.4 Equation Numbering in LaTeX</a></li>
+<li><a class="reference internal" href="#how-to-list-bibliography-items-without-giving-reference-in-text">1.5 How to list bibliography items without giving reference in text?</a></li>
+<li><a class="reference internal" href="#how-to-write-equation-over-two-pages-in-latex">1.6 How to write equation over two pages in LateX</a></li>
+<li><a class="reference internal" href="#how-to-write-piecewise-function-in-latex">1.7 How to Write piecewise function in LateX</a></li>
+<li><a class="reference internal" href="#font-size-in-latex">1.8 Font Size in Latex</a></li>
+<li><a class="reference internal" href="#lagrangian-symbol-in-latex">1.9 Lagrangian symbol in LateX</a></li>
+<li><a class="reference internal" href="#dirac-slashed-notation-in-latex">1.10 Dirac Slashed Notation in LateX</a></li>
+<li><a class="reference internal" href="#easy-way-to-get-any-symbol-in-latex">1.11 Easy way to get any symbol in LateX</a></li>
+<li><a class="reference internal" href="#parantheses-with-different-sizes">1.12 Parantheses With Different Sizes</a></li>
+<li><a class="reference internal" href="#how-to-suppress-page-number-in-latex">1.13 How to Suppress page number in LateX?</a></li>
+<li><a class="reference internal" href="#how-to-set-width-and-height-for-an-image">1.14 How to Set Width and Height For An Image</a></li>
+<li><a class="reference internal" href="#how-to-create-a-table-with-fixed-width-in-latex">1.15 How to create a table with fixed width in Latex?</a></li>
+<li><a class="reference internal" href="#hyperlinks">1.16 Hyperlinks</a></li>
+<li><a class="reference internal" href="#how-to-align-text">1.17 How to Align Text</a></li>
+<li><a class="reference internal" href="#how-to-write-chemical-symbols-in-latex">1.18 How to write Chemical Symbols in LateX</a></li>
+<li><a class="reference internal" href="#how-to-write-vector-symbol-on-letters">1.19 How to write vector symbol on letters</a></li>
+<li><a class="reference internal" href="#how-to-define-master-file-in-latex-emacs-auctex">1.20 How to Define Master File in Latex? (Emacs-Auctex)</a></li>
+<li><a class="reference internal" href="#how-to-create-title-without-date">1.21 How to create title without date?</a></li>
+<li><a class="reference internal" href="#how-to-give-links-hyperref">1.22 How to give Links (Hyperref)?</a></li>
+<li><a class="reference internal" href="#how-to-choose-times-new-roman-font-in-latex">1.23 How to Choose Times New Roman Font in Latex?</a></li>
+<li><a class="reference internal" href="#id5">1.24 How to Write Chemical Symbols in Latex?</a><ul>
+<li><a class="reference internal" href="#examples">1.24.1 Examples</a></li>
+<li><a class="reference internal" href="#adopted-from">1.24.2 Adopted from</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#how-to-write-quotations-at-the-beginning-of-the-chapters">1.25 How to Write quotations at the beginning of the chapters?</a><ul>
+<li><a class="reference internal" href="#epigraph">1.25.1 epigraph</a><ul>
+<li><a class="reference internal" href="#example">1.25.1.1 Example</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#fancychapters">1.25.2 fancychapters</a><ul>
+<li><a class="reference internal" href="#id6">1.25.2.1 Example</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#quotchap">1.25.3 quotchap</a><ul>
+<li><a class="reference internal" href="#id7">1.25.3.1 Example</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#the-information-is-adopted-from-https-www-sharelatex-com-learn-typesetting-quotations">1.25.4 The information is adopted from https://www.sharelatex.com/learn/Typesetting_quotations</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#how-to-refer-to-the-figures-tables-equations-etc">1.26 How to refer to the Figures, Tables, Equations etc..</a><ul>
+<li><a class="reference internal" href="#adopted-from-https-en-wikibooks-org-wiki-latex-labels-and-cross-referencing">1.26.1 Adopted from https://en.wikibooks.org/wiki/LaTeX/Labels_and_Cross-referencing</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#how-to-use-times-new-roman-fonts-in-latex">1.27 How to Use Times New Roman Fonts in Latex?</a></li>
+<li><a class="reference internal" href="#latex-line-and-page-breaking">1.28 Latex Line and Page Breaking</a></li>
+<li><a class="reference internal" href="#putting-figures-side-by-side-using-minipage">1.29 Putting Figures Side-By-Side Using Minipage</a><ul>
+<li><a class="reference internal" href="#id8">1.29.1 Examples</a></li>
+<li><a class="reference internal" href="#references">1.29.2 References:</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#use-cleveref-for-giving-references-to-multiple-figures">1.30 Use Cleveref for giving references to multiple figures</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">test</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Software Notes</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/latex.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="software-notes">
+<h1><a class="toc-backref" href="#id11">Software Notes</a><a class="headerlink" href="#software-notes" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Author</dt>
+<dd class="field-odd"><p>sbilmis</p>
+</dd>
+</dl>
+</div></blockquote>
+<div class="contents topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#software-notes" id="id11">Software Notes</a></p>
+<ul>
+<li><p><a class="reference internal" href="#latex" id="id12">1 LateX</a></p>
+<ul>
+<li><p><a class="reference internal" href="#how-to-list-of-all-the-figures-included-in-a-document" id="id13">1.1 How to List of all the Figures included in a document?</a></p></li>
+<li><p><a class="reference internal" href="#how-to-use-subfigures-in-latex-figures-side-by-side" id="id14">1.2 How to use subfigures in Latex? (Figures side by side)</a></p></li>
+<li><p><a class="reference internal" href="#how-can-i-change-the-spacing-in-my-latex-document" id="id15">1.3 How can I change the spacing in my LaTeX document?</a></p></li>
+<li><p><a class="reference internal" href="#equation-numbering-in-latex" id="id16">1.4 Equation Numbering in LaTeX</a></p></li>
+<li><p><a class="reference internal" href="#how-to-list-bibliography-items-without-giving-reference-in-text" id="id17">1.5 How to list bibliography items without giving reference in text?</a></p></li>
+<li><p><a class="reference internal" href="#how-to-write-equation-over-two-pages-in-latex" id="id18">1.6 How to write equation over two pages in LateX</a></p></li>
+<li><p><a class="reference internal" href="#how-to-write-piecewise-function-in-latex" id="id19">1.7 How to Write piecewise function in LateX</a></p></li>
+<li><p><a class="reference internal" href="#font-size-in-latex" id="id20">1.8 Font Size in Latex</a></p></li>
+<li><p><a class="reference internal" href="#lagrangian-symbol-in-latex" id="id21">1.9 Lagrangian symbol in LateX</a></p></li>
+<li><p><a class="reference internal" href="#dirac-slashed-notation-in-latex" id="id22">1.10 Dirac Slashed Notation in LateX</a></p></li>
+<li><p><a class="reference internal" href="#easy-way-to-get-any-symbol-in-latex" id="id23">1.11 Easy way to get any symbol in LateX</a></p></li>
+<li><p><a class="reference internal" href="#parantheses-with-different-sizes" id="id24">1.12 Parantheses With Different Sizes</a></p></li>
+<li><p><a class="reference internal" href="#how-to-suppress-page-number-in-latex" id="id25">1.13 How to Suppress page number in LateX?</a></p></li>
+<li><p><a class="reference internal" href="#how-to-set-width-and-height-for-an-image" id="id26">1.14 How to Set Width and Height For An Image</a></p></li>
+<li><p><a class="reference internal" href="#how-to-create-a-table-with-fixed-width-in-latex" id="id27">1.15 How to create a table with fixed width in Latex?</a></p></li>
+<li><p><a class="reference internal" href="#hyperlinks" id="id28">1.16 Hyperlinks</a></p></li>
+<li><p><a class="reference internal" href="#how-to-align-text" id="id29">1.17 How to Align Text</a></p></li>
+<li><p><a class="reference internal" href="#how-to-write-chemical-symbols-in-latex" id="id30">1.18 How to write Chemical Symbols in LateX</a></p></li>
+<li><p><a class="reference internal" href="#how-to-write-vector-symbol-on-letters" id="id31">1.19 How to write vector symbol on letters</a></p></li>
+<li><p><a class="reference internal" href="#how-to-define-master-file-in-latex-emacs-auctex" id="id32">1.20 How to Define Master File in Latex? (Emacs-Auctex)</a></p></li>
+<li><p><a class="reference internal" href="#how-to-create-title-without-date" id="id33">1.21 How to create title without date?</a></p></li>
+<li><p><a class="reference internal" href="#how-to-give-links-hyperref" id="id34">1.22 How to give Links (Hyperref)?</a></p></li>
+<li><p><a class="reference internal" href="#how-to-choose-times-new-roman-font-in-latex" id="id35">1.23 How to Choose Times New Roman Font in Latex?</a></p></li>
+<li><p><a class="reference internal" href="#id5" id="id36">1.24 How to Write Chemical Symbols in Latex?</a></p>
+<ul>
+<li><p><a class="reference internal" href="#examples" id="id37">1.24.1 Examples</a></p></li>
+<li><p><a class="reference internal" href="#adopted-from" id="id38">1.24.2 Adopted from</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#how-to-write-quotations-at-the-beginning-of-the-chapters" id="id39">1.25 How to Write quotations at the beginning of the chapters?</a></p>
+<ul>
+<li><p><a class="reference internal" href="#epigraph" id="id40">1.25.1 epigraph</a></p>
+<ul>
+<li><p><a class="reference internal" href="#example" id="id41">1.25.1.1 Example</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#fancychapters" id="id42">1.25.2 fancychapters</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id6" id="id43">1.25.2.1 Example</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#quotchap" id="id44">1.25.3 quotchap</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id7" id="id45">1.25.3.1 Example</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#the-information-is-adopted-from-https-www-sharelatex-com-learn-typesetting-quotations" id="id46">1.25.4 The information is adopted from https://www.sharelatex.com/learn/Typesetting_quotations</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#how-to-refer-to-the-figures-tables-equations-etc" id="id47">1.26 How to refer to the Figures, Tables, Equations etc..</a></p>
+<ul>
+<li><p><a class="reference internal" href="#adopted-from-https-en-wikibooks-org-wiki-latex-labels-and-cross-referencing" id="id48">1.26.1 Adopted from https://en.wikibooks.org/wiki/LaTeX/Labels_and_Cross-referencing</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#how-to-use-times-new-roman-fonts-in-latex" id="id49">1.27 How to Use Times New Roman Fonts in Latex?</a></p></li>
+<li><p><a class="reference internal" href="#latex-line-and-page-breaking" id="id50">1.28 Latex Line and Page Breaking</a></p></li>
+<li><p><a class="reference internal" href="#putting-figures-side-by-side-using-minipage" id="id51">1.29 Putting Figures Side-By-Side Using Minipage</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id8" id="id52">1.29.1 Examples</a></p></li>
+<li><p><a class="reference internal" href="#references" id="id53">1.29.2 References:</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#use-cleveref-for-giving-references-to-multiple-figures" id="id54">1.30 Use Cleveref for giving references to multiple figures</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="latex">
+<h2><a class="toc-backref" href="#id12">1 LateX</a><a class="headerlink" href="#latex" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="how-to-list-of-all-the-figures-included-in-a-document">
+<h3><a class="toc-backref" href="#id13">1.1 How to List of all the Figures included in a document?</a><a class="headerlink" href="#how-to-list-of-all-the-figures-included-in-a-document" title="Permalink to this headline">¶</a></h3>
+<p>A list of all the figures included in a document can be generated with the following command</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">listoffigures</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="how-to-use-subfigures-in-latex-figures-side-by-side">
+<h3><a class="toc-backref" href="#id14">1.2 How to use subfigures in Latex? (Figures side by side)</a><a class="headerlink" href="#how-to-use-subfigures-in-latex-figures-side-by-side" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-tex notranslate"><div class="highlight"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+
+<span class="k">\usepackage</span><span class="nb">{</span>graphicx<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>caption<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>subcaption<span class="nb">}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>figure<span class="nb">}</span>
+    <span class="k">\centering</span>
+    <span class="k">\begin</span><span class="nb">{</span>subfigure<span class="nb">}{</span>0.4<span class="k">\textwidth</span><span class="nb">}</span> <span class="c">% width of left subfigure</span>
+            <span class="k">\includegraphics</span><span class="na">[width=\textwidth]</span><span class="nb">{</span>rncalt.png<span class="nb">}</span>
+            <span class="k">\caption</span><span class="nb">{</span>RNC<span class="nb">}</span> <span class="c">% subcaption</span>
+    <span class="k">\end</span><span class="nb">{</span>subfigure<span class="nb">}</span>
+    <span class="k">\vspace</span><span class="nb">{</span>1em<span class="nb">}</span> <span class="c">% here you can insert horizontal or vertical space</span>
+    <span class="k">\begin</span><span class="nb">{</span>subfigure<span class="nb">}{</span>0.4<span class="k">\textwidth</span><span class="nb">}</span> <span class="c">% width of right subfigure</span>
+            <span class="k">\includegraphics</span><span class="na">[width=\textwidth]</span><span class="nb">{</span>dncalt.png<span class="nb">}</span>
+            <span class="k">\caption</span><span class="nb">{</span>DNC<span class="nb">}</span> <span class="c">% subcaption</span>
+    <span class="k">\end</span><span class="nb">{</span>subfigure<span class="nb">}</span>
+    <span class="k">\caption</span><span class="nb">{</span>Wordcloud of national conventions<span class="nb">}</span> <span class="c">% caption for whole figure</span>
+<span class="k">\end</span><span class="nb">{</span>figure<span class="nb">}</span>
+
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="how-can-i-change-the-spacing-in-my-latex-document">
+<h3><a class="toc-backref" href="#id15">1.3 How can I change the spacing in my LaTeX document?</a><a class="headerlink" href="#how-can-i-change-the-spacing-in-my-latex-document" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">usepackage</span><span class="p">{</span><span class="n">setspace</span><span class="p">}</span>
+\<span class="n">doublespacing</span>
+\<span class="n">onehalfspacing</span>
+
+\<span class="n">begin</span><span class="p">{</span><span class="n">singlespace</span><span class="p">}</span>
+\<span class="n">end</span><span class="p">{</span><span class="n">singlespace</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>You can also set the spacing to be something other than doublespaced; for
+example, if you wanted to have one-and-a-quarter spacing between lines,
+use the line</p>
+<p><code class="docutils literal notranslate"><span class="pre">\setstretch{1.25}</span></code></p>
+</div>
+<div class="section" id="equation-numbering-in-latex">
+<h3><a class="toc-backref" href="#id16">1.4 Equation Numbering in LaTeX</a><a class="headerlink" href="#equation-numbering-in-latex" title="Permalink to this headline">¶</a></h3>
+<p>You can also use the label and ref (or eqref from the amsmath package) commands to label and reference equations, respectively. For equation number 1, ref results in 1, and eqref results in (1).</p>
+</div>
+<div class="section" id="how-to-list-bibliography-items-without-giving-reference-in-text">
+<h3><a class="toc-backref" href="#id17">1.5 How to list bibliography items without giving reference in text?</a><a class="headerlink" href="#how-to-list-bibliography-items-without-giving-reference-in-text" title="Permalink to this headline">¶</a></h3>
+<p>This is especially useful if you want to create just a publication list.</p>
+<p><code class="docutils literal notranslate"><span class="pre">\nocite{*}</span></code> is used for this.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">documentclass</span><span class="p">{</span><span class="n">article</span><span class="p">}</span>
+\<span class="n">nocite</span><span class="p">{</span><span class="o">*</span><span class="p">}</span>
+\<span class="n">begin</span><span class="p">{</span><span class="n">document</span><span class="p">}</span>
+\<span class="n">bibliographystyle</span><span class="p">{</span><span class="n">alpha</span><span class="p">}</span>
+\<span class="n">bibliography</span><span class="p">{</span><span class="n">bibfile</span><span class="p">}</span>
+\<span class="n">end</span><span class="p">{</span><span class="n">document</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="how-to-write-equation-over-two-pages-in-latex">
+<h3><a class="toc-backref" href="#id18">1.6 How to write equation over two pages in LateX</a><a class="headerlink" href="#how-to-write-equation-over-two-pages-in-latex" title="Permalink to this headline">¶</a></h3>
+<p>Add this in the preamble after loading amsmath</p>
+<p><code class="docutils literal notranslate"><span class="pre">\allowdisplaybreaks</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">usepackage</span><span class="p">{</span><span class="n">amsmath</span><span class="p">}</span>
+\<span class="n">allowdisplaybreaks</span>
+</pre></div>
+</div>
+<p>Note that using <code class="docutils literal notranslate"><span class="pre">\align*</span></code> environment is necessary for allowing displaybreak. It may not function for split environment for instance.</p>
+<p><a class="reference external" href="https://tex.stackexchange.com/questions/42720/long-equation-does-not-page-break">https://tex.stackexchange.com/questions/42720/long-equation-does-not-page-break</a></p>
+</div>
+<div class="section" id="how-to-write-piecewise-function-in-latex">
+<h3><a class="toc-backref" href="#id19">1.7 How to Write piecewise function in LateX</a><a class="headerlink" href="#how-to-write-piecewise-function-in-latex" title="Permalink to this headline">¶</a></h3>
+<p>Piecewise function can be written using the {amsmath} package as follows;</p>
+<div class="highlight-tex notranslate"><div class="highlight"><pre><span></span><span class="k">\usepackage</span><span class="nb">{</span>amsmath<span class="nb">}</span>
+...
+...
+<span class="sb">$$</span><span class="nb"></span>
+<span class="nb">f</span><span class="o">(</span><span class="nb">n</span><span class="o">)</span><span class="nb"> </span><span class="o">=</span><span class="nb"></span>
+<span class="nv">\begin</span><span class="nb">{cases}</span>
+<span class="nb">n</span><span class="o">/</span><span class="m">2</span><span class="nb">, &amp; </span><span class="nv">\text</span><span class="nb">{if }n</span><span class="nv">\text</span><span class="nb">{ is even} </span><span class="nv">\\</span><span class="nb"></span>
+<span class="m">3</span><span class="nb">n</span><span class="o">+</span><span class="m">1</span><span class="nb">, &amp; </span><span class="nv">\text</span><span class="nb">{if }n</span><span class="nv">\text</span><span class="nb">{ is odd}</span>
+<span class="nv">\end</span><span class="nb">{cases}</span>
+<span class="s">$$</span>
+</pre></div>
+</div>
+<p>This will be shown as;
+.. image:: img/piecewise.png</p>
+<p><a class="reference external" href="https://sefak.wordpress.com/2010/04/16/latex-piecewise-function/">(This note is adapted from here</a>)</p>
+</div>
+<div class="section" id="font-size-in-latex">
+<h3><a class="toc-backref" href="#id20">1.8 Font Size in Latex</a><a class="headerlink" href="#font-size-in-latex" title="Permalink to this headline">¶</a></h3>
+<p>(Useful especially in caption of figures if that does not fit to the page.)</p>
+<p>The font changing commands are often determined by the document class itself. For the standard classes (with size options in the first row), the values are as follows:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 42%" />
+<col style="width: 19%" />
+<col style="width: 19%" />
+<col style="width: 19%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Command</p></td>
+<td><p>10pt</p></td>
+<td><p>11pt</p></td>
+<td><p>12pt</p></td>
+</tr>
+<tr class="row-even"><td><p>tiny</p></td>
+<td><p>5</p></td>
+<td><p>6</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p>scriptsize</p></td>
+<td><p>7</p></td>
+<td><p>8</p></td>
+<td><p>8</p></td>
+</tr>
+<tr class="row-even"><td><p>footnotesize</p></td>
+<td><p>8</p></td>
+<td><p>9</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-odd"><td><p>small</p></td>
+<td><p>9</p></td>
+<td><p>10</p></td>
+<td><p>10.95</p></td>
+</tr>
+<tr class="row-even"><td><p>normalsize</p></td>
+<td><p>10</p></td>
+<td><p>10.95</p></td>
+<td><p>12</p></td>
+</tr>
+<tr class="row-odd"><td><p>large</p></td>
+<td><p>12</p></td>
+<td><p>12</p></td>
+<td><p>14.4</p></td>
+</tr>
+<tr class="row-even"><td><p>Large</p></td>
+<td><p>14.4</p></td>
+<td><p>14.4</p></td>
+<td><p>17.28</p></td>
+</tr>
+<tr class="row-odd"><td><p>LARGE</p></td>
+<td><p>17.28</p></td>
+<td><p>17.28</p></td>
+<td><p>20.74</p></td>
+</tr>
+<tr class="row-even"><td><p>huge</p></td>
+<td><p>20.74</p></td>
+<td><p>20.74</p></td>
+<td><p>24.88</p></td>
+</tr>
+<tr class="row-odd"><td><p>Huge</p></td>
+<td><p>24.88</p></td>
+<td><p>24.88</p></td>
+<td><p>24.88</p></td>
+</tr>
+</tbody>
+</table>
+<p>(<a class="reference external" href="http://tex.stackexchange.com/questions/24599/what-point-pt-font-size-are-large-etc">This information is adapted from here</a>)</p>
+</div>
+<div class="section" id="lagrangian-symbol-in-latex">
+<h3><a class="toc-backref" href="#id21">1.9 Lagrangian symbol in LateX</a><a class="headerlink" href="#lagrangian-symbol-in-latex" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">\usepackage{amssymb}</span></code>
+<code class="docutils literal notranslate"><span class="pre">$\mathcal{L}$</span></code></p>
+</div>
+<div class="section" id="dirac-slashed-notation-in-latex">
+<h3><a class="toc-backref" href="#id22">1.10 Dirac Slashed Notation in LateX</a><a class="headerlink" href="#dirac-slashed-notation-in-latex" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-tex notranslate"><div class="highlight"><pre><span></span><span class="k">\usepackage</span><span class="nb">{</span>amsmath<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>slashed<span class="nb">}</span>
+<span class="s">$</span><span class="nv">\slashed</span><span class="nb">{p}</span><span class="s">$</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="easy-way-to-get-any-symbol-in-latex">
+<h3><a class="toc-backref" href="#id23">1.11 Easy way to get any symbol in LateX</a><a class="headerlink" href="#easy-way-to-get-any-symbol-in-latex" title="Permalink to this headline">¶</a></h3>
+<p>Detexify is a useful webpage in which you draw the symbol with your mouse and it gives you the LateX code. Give it a try.</p>
+<p><a class="reference external" href="http://detexify.kirelabs.org/classify.html">Detexify</a></p>
+</div>
+<div class="section" id="parantheses-with-different-sizes">
+<h3><a class="toc-backref" href="#id24">1.12 Parantheses With Different Sizes</a><a class="headerlink" href="#parantheses-with-different-sizes" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">(</span> <span class="pre">\big(</span> <span class="pre">\Big(</span> <span class="pre">\bigg(</span> <span class="pre">\Bigg(</span></code></p>
+<p>will produce the output;</p>
+<p>begin{equation}
+( big( Big( bigg( Bigg( nonumber
+end{equation}</p>
+<p><a class="reference external" href="http://tex.stackexchange.com/questions/38868/big-parenthesis-in-an-equation">This information is adapted from here.</a></p>
+</div>
+<div class="section" id="how-to-suppress-page-number-in-latex">
+<h3><a class="toc-backref" href="#id25">1.13 How to Suppress page number in LateX?</a><a class="headerlink" href="#how-to-suppress-page-number-in-latex" title="Permalink to this headline">¶</a></h3>
+<p>Use</p>
+<p><code class="docutils literal notranslate"><span class="pre">\pagenumbering{gobble}</span></code>
+to switch off page numbering.</p>
+<p>To switch it on afterwards, use</p>
+<p><code class="docutils literal notranslate"><span class="pre">\pagenumbering{arabic}</span></code>
+for arabic numbers</p>
+<p><code class="docutils literal notranslate"><span class="pre">\pagenumbering{alph}</span></code>
+for lowercase alphabetic</p>
+<p><code class="docutils literal notranslate"><span class="pre">\pagenumbering{Alph}</span></code>
+for uppercase alphabetic</p>
+<p><code class="docutils literal notranslate"><span class="pre">\pagenumbering{roman}</span></code>
+for Roman numbering</p>
+<p><a class="reference external" href="http://tex.stackexchange.com/questions/7355/how-to-suppress-page-number">This information is adapted from here.</a></p>
+</div>
+<div class="section" id="how-to-set-width-and-height-for-an-image">
+<h3><a class="toc-backref" href="#id26">1.14 How to Set Width and Height For An Image</a><a class="headerlink" href="#how-to-set-width-and-height-for-an-image" title="Permalink to this headline">¶</a></h3>
+<p>Use “keepaspectratio”</p>
+<p><code class="docutils literal notranslate"><span class="pre">\usepackage{graphicx}</span></code>
+…</p>
+<p><code class="docutils literal notranslate"><span class="pre">\includegraphics[width=2cm,height=3cm,keepaspectratio]{./graphics/amato}</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">\includegraphics[width=2cm,height=3cm,keepaspectratio]{./graphics/cardtrick}</span></code></p>
+<p><a class="reference external" href="http://tex.stackexchange.com/questions/47245/set-a-maximum-width-and-height-for-an-image">This information is adapted from here.</a></p>
+</div>
+<div class="section" id="how-to-create-a-table-with-fixed-width-in-latex">
+<h3><a class="toc-backref" href="#id27">1.15 How to create a table with fixed width in Latex?</a><a class="headerlink" href="#how-to-create-a-table-with-fixed-width-in-latex" title="Permalink to this headline">¶</a></h3>
+<p>In default tabular environment, every column get the width they need. This could lead to extra wide tables or to a bad looking if the width differs between the rows. Use p-parameter of the tabular environment.</p>
+<p>begin{tabular}{<a href="#id9"><span class="problematic" id="id10">|p{1cm}|p{2cm}|p{3cm}|</span></a>}
+hline
+1 cm width &amp; 2 cm width &amp; 3 cm width \
+hline
+test 1 &amp; test 2 &amp; test 3\
+hline
+end{tabular}</p>
+<p>This code will be shown as;</p>
+<p><a class="reference external" href="http://www.sascha-frank.com/Faq/tables_six.html">This note is adapted from here.</a></p>
+</div>
+<div class="section" id="hyperlinks">
+<h3><a class="toc-backref" href="#id28">1.16 Hyperlinks</a><a class="headerlink" href="#hyperlinks" title="Permalink to this headline">¶</a></h3>
+<p>One must be careful when importing hyperref. Usually it has to be the last package to be imported, but there might be some exceptions to this rule.</p>
+<p><code class="docutils literal notranslate"><span class="pre">\usepackage{hyperref}</span></code></p>
+<p><strong>Styles and Colors</strong></p>
+<div class="highlight-tex notranslate"><div class="highlight"><pre><span></span><span class="k">\usepackage</span><span class="nb">{</span>hyperref<span class="nb">}</span>
+<span class="k">\hypersetup</span><span class="nb">{</span>
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+<span class="nb">}</span>
+</pre></div>
+</div>
+<p>Below example is adapted from <a class="reference external" href="https://www.sharelatex.com/learn/Hyperlinks">here</a></p>
+<div class="highlight-tex notranslate"><div class="highlight"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>book<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="na">[utf8]</span><span class="nb">{</span>inputenc<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="na">[english]</span><span class="nb">{</span>babel<span class="nb">}</span>
+
+<span class="k">\usepackage</span><span class="nb">{</span>hyperref<span class="nb">}</span>
+<span class="k">\hypersetup</span><span class="nb">{</span>
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+<span class="nb">}</span>
+
+<span class="k">\urlstyle</span><span class="nb">{</span>same<span class="nb">}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+
+<span class="k">\tableofcontents</span>
+
+<span class="k">\chapter</span><span class="nb">{</span>First Chapter<span class="nb">}</span>
+
+This will be an empty chapter and I will put some text here
+
+<span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+<span class="k">\label</span><span class="nb">{</span>eq:1<span class="nb">}</span>
+<span class="k">\sum</span><span class="nb">_{</span>i=0<span class="nb">}^{</span><span class="k">\infty</span><span class="nb">}</span> a<span class="nb">_</span>i x<span class="nb">^</span>i
+<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+
+The equation <span class="k">\ref</span><span class="nb">{</span>eq:1<span class="nb">}</span> shows a sum that is divergent. This formula
+will be latter used in the page <span class="k">\pageref</span><span class="nb">{</span>second<span class="nb">}</span>.
+
+For further references see <span class="k">\href</span><span class="nb">{</span>http://www.sharelatex.com<span class="nb">}{</span>Something
+Linky<span class="nb">}</span> or go to the next url: <span class="k">\url</span><span class="nb">{</span>http://www.sharelatex.com<span class="nb">}</span> or open
+the next file <span class="k">\href</span><span class="nb">{</span>run:./file.txt<span class="nb">}{</span>File.txt<span class="nb">}</span>
+
+It&#39;s also possible to link directly any word or
+<span class="k">\hyperlink</span><span class="nb">{</span>thesentence<span class="nb">}{</span>any sentence<span class="nb">}</span> in you document.
+
+If you read this text, you will get noinformation.  Really?  Is there
+no information?  Is there a diㄦence between thistext and some nonsense
+like Huardest gefburn&quot;?  Kjift <span class="nb">{</span> not at all!
+
+For instance <span class="k">\hypertarget</span><span class="nb">{</span>thesentence<span class="nb">}{</span>this sentence<span class="nb">}</span>.
+</pre></div>
+</div>
+</div>
+<div class="section" id="how-to-align-text">
+<h3><a class="toc-backref" href="#id29">1.17 How to Align Text</a><a class="headerlink" href="#how-to-align-text" title="Permalink to this headline">¶</a></h3>
+<p>For horizontal alignment use <code class="docutils literal notranslate"><span class="pre">\flushleft</span></code> or <code class="docutils literal notranslate"><span class="pre">flushright</span></code>.</p>
+<div class="highlight-tex notranslate"><div class="highlight"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>flushleft<span class="nb">}</span>
+text
+....
+<span class="k">\end</span><span class="nb">{</span>flushleft<span class="nb">}</span>
+</pre></div>
+</div>
+<p>Although <code class="docutils literal notranslate"><span class="pre">\hfill</span></code> is not preferrable it can be used also. However, <code class="docutils literal notranslate"><span class="pre">\hfill</span></code> that occurs at the start of aline will be ignored.
+To avoid this use following instead of <code class="docutils literal notranslate"><span class="pre">\hfill</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">\null\hfill</span></code></p>
+</div>
+<div class="section" id="how-to-write-chemical-symbols-in-latex">
+<h3><a class="toc-backref" href="#id30">1.18 How to write Chemical Symbols in LateX</a><a class="headerlink" href="#how-to-write-chemical-symbols-in-latex" title="Permalink to this headline">¶</a></h3>
+<p>Using mchem package is a better way to write chemical symbols.</p>
+<p><code class="docutils literal notranslate"><span class="pre">\usepackage{mchem}</span></code></p>
+<div class="highlight-LATEX notranslate"><div class="highlight"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="na">[version=3]</span><span class="nb">{</span>mhchem<span class="nb">}</span>
+<span class="k">\parskip</span>=0.1in
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+
+<span class="k">\ce</span><span class="nb">{</span>SO4<span class="nb">^</span>2-<span class="nb">}</span>
+
+<span class="k">\ce</span><span class="nb">{^{</span>227<span class="nb">}_{</span>90<span class="nb">}</span>Th+<span class="nb">}</span>
+
+<span class="k">\ce</span><span class="nb">{</span>A<span class="k">\bond</span><span class="nb">{</span>-<span class="nb">}</span>B<span class="k">\bond</span><span class="nb">{</span>=<span class="nb">}</span>C<span class="k">\bond</span><span class="nb">{</span>#<span class="nb">}</span>D<span class="nb">}</span>
+
+<span class="k">\ce</span><span class="nb">{</span>CO2 + C -&gt; 2CO<span class="nb">}</span>
+
+<span class="k">\ce</span><span class="nb">{</span>SO4<span class="nb">^</span>2- + Ba<span class="nb">^</span>2+ -&gt; BaSO4 v<span class="nb">}</span>
+
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+<p>Adapted from <a class="reference external" href="https://www.johndcook.com/blog/2010/12/08/typesetting-chemistry-in-latex/">https://www.johndcook.com/blog/2010/12/08/typesetting-chemistry-in-latex/</a></p>
+</div>
+<div class="section" id="how-to-write-vector-symbol-on-letters">
+<h3><a class="toc-backref" href="#id31">1.19 How to write vector symbol on letters</a><a class="headerlink" href="#how-to-write-vector-symbol-on-letters" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-LATEX notranslate"><div class="highlight"><pre><span></span><span class="k">\vec</span><span class="nb">{</span>A<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="how-to-define-master-file-in-latex-emacs-auctex">
+<h3><a class="toc-backref" href="#id32">1.20 How to Define Master File in Latex? (Emacs-Auctex)</a><a class="headerlink" href="#how-to-define-master-file-in-latex-emacs-auctex" title="Permalink to this headline">¶</a></h3>
+<p>This is useful if you are dealing with large tex files, including chapters, sections seperately. You can compile directly within each chapter, section once you define the Master file.</p>
+<p>A quote from the manual;</p>
+<p>“You may wish to spread a document over many files (as you are likely to do if there are multiple authors, or if you have not yet discovered the power of the outline commands). This can be done by having a “master” file in which you include the various files with the TeX macro ‘input’ or the LaTeX macro ‘include’. These files may also include other files themselves. However, to format the document you must run the commands on the top level master file.”</p>
+<hr class="docutils" />
+<p>When you create a new file AUCTeX will ask you about the “master” document for it.</p>
+<p>(If it does not ask. you can call it with the following key-binding;</p>
+<p>C-c _ runs the command TeX-master-file-ask, which is an interactive
+compiled Lisp function in `tex.el’.</p>
+<p>It is bound to C-c _, &lt;menu-bar&gt; &lt;LaTeX&gt; &lt;Multifile/Parsing&gt; &lt;Set
+Master File&gt;.</p>
+<p>(TeX-master-file-ask)</p>
+<p>Ask for master file, set `TeX-master’ and add local variables.
+)</p>
+<p>If you define a master, C-c C-c will compile the master instead of the currently open file.</p>
+<p>AUCTeX keeps track of this by adding a footer with the information it needs. Assuming you have a master document index.tex, the footer would look like this:</p>
+<p>%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: “index”
+%%% End:</p>
+<p>Check:</p>
+<p><a class="reference external" href="http://stackoverflow.com/questions/2199463/emacs-auctex-run-command-on-file-that-is-not-currently-open">http://stackoverflow.com/questions/2199463/emacs-auctex-run-command-on-file-that-is-not-currently-open</a></p>
+<p><a class="reference external" href="https://www.gnu.org/software/auctex/manual/auctex/Multifile.html">https://www.gnu.org/software/auctex/manual/auctex/Multifile.html</a></p>
+</div>
+<div class="section" id="how-to-create-title-without-date">
+<h3><a class="toc-backref" href="#id33">1.21 How to create title without date?</a><a class="headerlink" href="#how-to-create-title-without-date" title="Permalink to this headline">¶</a></h3>
+<p>If you want a blank date, just use date{}.</p>
+<p>title{aa}
+author{bb}
+date{}
+maketitle</p>
+</div>
+<div class="section" id="how-to-give-links-hyperref">
+<h3><a class="toc-backref" href="#id34">1.22 How to give Links (Hyperref)?</a><a class="headerlink" href="#how-to-give-links-hyperref" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-tex notranslate"><div class="highlight"><pre><span></span><span class="k">\usepackage</span><span class="nb">{</span>hyperref<span class="nb">}</span>
+<span class="k">\hypersetup</span><span class="nb">{</span>
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+<span class="nb">}</span>
+<span class="k">\urlstyle</span><span class="nb">{</span>same<span class="nb">}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+...
+For further references see <span class="k">\href</span><span class="nb">{</span>http://www.sharelatex.com<span class="nb">}{</span>Something
+Linky<span class="nb">}</span> or go to the next url: <span class="k">\url</span><span class="nb">{</span>http://www.sharelatex.com<span class="nb">}</span> or open
+the next file <span class="k">\href</span><span class="nb">{</span>run:./file.txt<span class="nb">}{</span>File.txt<span class="nb">}</span>
+
+It&#39;s also possible to link directly any word or
+<span class="k">\hyperlink</span><span class="nb">{</span>thesentence<span class="nb">}{</span>any sentence<span class="nb">}</span> in you document.
+
+If you read this text, you will get noinformation.  Really?  Is there
+no information?  Is there a diㄦence between thistext and some nonsense
+like Huardest gefburn&quot;?  Kjift <span class="nb">{</span> not at all!
+
+For instance <span class="k">\hypertarget</span><span class="nb">{</span>thesentence<span class="nb">}{</span>this sentence<span class="nb">}</span>.
+...
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>hypersetup{ … }</dt><dd><p>This will set the options to configure the behaviour of the links within the document. Every parameter must be comma-separated and the syntax must be in the forma parameter=value.</p>
+</dd>
+<dt>colorlinks=true</dt><dd><p>Links will be coloured, the default colour is red.</p>
+</dd>
+<dt>linkcolor=blue</dt><dd><p>Internal links, those generated by cross-referenced elements, are displayed in blue.</p>
+</dd>
+<dt>filecolor=magenta</dt><dd><p>Links to local files will be shown in magenta colour (see linking local files).</p>
+</dd>
+<dt>urlcolor=cyan</dt><dd><p>Links to web sites are set to cyan colour (see linking web addresses).</p>
+</dd>
+<dt>urlstyle{same}</dt><dd><p>Default settings print links in mono-style spaced fonts, this command changes that and displays the links in the same style as the rest of the text.</p>
+</dd>
+</dl>
+<p>Check:
+This information is adapted from <a class="reference external" href="https://www.sharelatex.com/learn/Hyperlinks">https://www.sharelatex.com/learn/Hyperlinks</a></p>
+</div>
+<div class="section" id="how-to-choose-times-new-roman-font-in-latex">
+<h3><a class="toc-backref" href="#id35">1.23 How to Choose Times New Roman Font in Latex?</a><a class="headerlink" href="#how-to-choose-times-new-roman-font-in-latex" title="Permalink to this headline">¶</a></h3>
+<p>Compile with XeLaTeX or LuaLaTeX, and use:</p>
+<p>usepackage{fontspec}
+setmainfont{Times New Roman}</p>
+<p>This is true Times New Roman, via modern TeX engines.</p>
+<p>Adopted from <a class="reference external" href="http://tex.stackexchange.com/questions/67768/times-new-roman-font">http://tex.stackexchange.com/questions/67768/times-new-roman-font</a></p>
+</div>
+<div class="section" id="id5">
+<h3><a class="toc-backref" href="#id36">1.24 How to Write Chemical Symbols in Latex?</a><a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>Using the mhchem package, chemical symbols can be written easily. For instance, sulfate would be written as ce{SO4<sup>2</sup>-}.</p>
+<p>usepackage[version=3]{mhchem}</p>
+<div class="section" id="examples">
+<h4><a class="toc-backref" href="#id37">1.24.1 Examples</a><a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h4>
+<p>ce{SO4^2-}</p>
+<p>ce{<sup>227</sup><sub>90</sub>Th+}</p>
+<p>ce{Abond{-}Bbond{=}Cbond{#}D}</p>
+<p>ce{CO2 + C -&gt; 2CO}</p>
+<p>ce{SO4^2- + Ba^2+ -&gt; BaSO4 v}</p>
+</div>
+<div class="section" id="adopted-from">
+<h4><a class="toc-backref" href="#id38">1.24.2 Adopted from</a><a class="headerlink" href="#adopted-from" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="https://www.ctan.org/pkg/mhchem?lang=en">https://www.ctan.org/pkg/mhchem?lang=en</a>
+<a class="reference external" href="http://www.johndcook.com/blog/2010/12/08/typesetting-chemistry-in-latex/">http://www.johndcook.com/blog/2010/12/08/typesetting-chemistry-in-latex/</a></p>
+</div>
+</div>
+<div class="section" id="how-to-write-quotations-at-the-beginning-of-the-chapters">
+<h3><a class="toc-backref" href="#id39">1.25 How to Write quotations at the beginning of the chapters?</a><a class="headerlink" href="#how-to-write-quotations-at-the-beginning-of-the-chapters" title="Permalink to this headline">¶</a></h3>
+<p>There are some different ways;</p>
+<div class="section" id="epigraph">
+<h4><a class="toc-backref" href="#id40">1.25.1 epigraph</a><a class="headerlink" href="#epigraph" title="Permalink to this headline">¶</a></h4>
+<p>Some authors like to write quotations at the beginning of a chapter, these quotations are known as epigraphs. The epigraph package provides a vast set of options to typeset the epigraphs and epigraphs lists.</p>
+<p>The package is imported by</p>
+<p>usepackage{epigraph}</p>
+<p>Then the quotation is typed with the command epigraph{}{} whose first parameter is the quotation itself and the second parameter is the quotations source (author, book, etc.)</p>
+<p>This package can handle several quotations by means of a special environment and also has many customization options.</p>
+<div class="section" id="example">
+<h5><a class="toc-backref" href="#id41">1.25.1.1 Example</a><a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h5>
+<p>documentclass{book}
+usepackage[utf8]{inputenc}</p>
+<p>usepackage{epigraph}</p>
+<p>…</p>
+<p>chapter{Something}</p>
+<p>epigraph{All human things are subject to decay, and when fate
+summons, Monarchs must obey}{textit{Mac Flecknoe \ John Dryden}}</p>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit…</p>
+</div>
+</div>
+<div class="section" id="fancychapters">
+<h4><a class="toc-backref" href="#id42">1.25.2 fancychapters</a><a class="headerlink" href="#fancychapters" title="Permalink to this headline">¶</a></h4>
+<p>There’s another package to typeset epigraphs or quotations at the beginning of each chapter, fancychapters. This package provides a new command to define chapter titles:
+for this package to work, the first line in the document must be</p>
+<p>documentstyle[fancychapters]{report}</p>
+<p>The type book can also be set instead of report.</p>
+<p>The command Chapter takes two parameters inside braces. The first one is the quote to by printed on top of the title, the second one is the chapter title. There’s and additional optional parameter inside brackets that corresponds to the optional parameter of the regular chapter command.</p>
+<p>This package only works on books and reports. Even though the package works fine and automatically computes the width and height of the quotation and the chapter title, it seems that it’s not longer maintained.</p>
+<div class="section" id="id6">
+<h5><a class="toc-backref" href="#id43">1.25.2.1 Example</a><a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h5>
+<p>documentstyle[fancychapters]{report}</p>
+<p>begin{document}
+Chapter{</p>
+<blockquote>
+<div><p>``Parents of young organic life forms should be warned, that</p>
+</div></blockquote>
+<p>towels can be harmful, if swallowed in large quantities.’’
+\\[5pt]
+rightline{{rm — Douglas Adams}}
+}[No More]{Building No More Operating Systems}</p>
+</div>
+</div>
+<div class="section" id="quotchap">
+<h4><a class="toc-backref" href="#id44">1.25.3 quotchap</a><a class="headerlink" href="#quotchap" title="Permalink to this headline">¶</a></h4>
+<p>The package quotechap is somehow similar to fancychapters but more complex. It redefines the commands chapter and its starred version to reformat them, you can even change the colour of the chapter number with this package. Also, provides a special environment to typeset quotations and the corresponding authors.</p>
+<p>The package is imported by the command</p>
+<p>usepackage{quotchap}</p>
+<p>then, inside the environment savequote the quotes are typed. The parameter inside brackets, 45mm, sets the width of the quotation area. After each quote the command qauthor{} is used to typeset and format the author’s name.</p>
+<div class="section" id="id7">
+<h5><a class="toc-backref" href="#id45">1.25.3.1 Example</a><a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h5>
+<p>documentclass{book}
+usepackage[utf8]{inputenc}</p>
+<p>usepackage{quotchap}</p>
+<p>begin{document}
+begin{savequote}[45mm]
+—When shall we three meet again
+in thunder, lightning, or in rain?
+—When the hurlyburly’s done,
+when the battle’s lost and won.
+qauthor{Shakespeare, Macbeth}
+Cookies! Give me some cookies!
+qauthor{Cookie Monster}
+end{savequote}
+chapter{Classic Sesame Street}
+end{document}</p>
+</div>
+</div>
+<div class="section" id="the-information-is-adopted-from-https-www-sharelatex-com-learn-typesetting-quotations">
+<h4>1.25.4 The information is adopted from <a class="reference external" href="https://www.sharelatex.com/learn/Typesetting_quotations">https://www.sharelatex.com/learn/Typesetting_quotations</a><a class="headerlink" href="#the-information-is-adopted-from-https-www-sharelatex-com-learn-typesetting-quotations" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+<div class="section" id="how-to-refer-to-the-figures-tables-equations-etc">
+<h3><a class="toc-backref" href="#id47">1.26 How to refer to the Figures, Tables, Equations etc..</a><a class="headerlink" href="#how-to-refer-to-the-figures-tables-equations-etc" title="Permalink to this headline">¶</a></h3>
+<p>Since you can use exactly the same commands to reference almost anything, you might get a bit confused after you have introduced a lot of references. It is common practice among LaTeX users to add a few letters to the label to describe what you are referencing. Some packages, such as fancyref, rely on this meta information. Here is an example:</p>
+<p>ch:     chapter
+sec:    section
+subsec:         subsection
+fig:    figure
+tab:    table
+eq:     equation
+lst:    code listing
+itm:    enumerated list item
+alg:    algorithm
+app:    appendix subsection</p>
+<p>Note: When a label is declared within a float environment, the ref{…} will return the respective fig/table number, but it must occur after the caption. When declared outside, it will give the section number. To be completely safe, the label for any picture or table can go within the caption{} command, as in</p>
+<p>caption{Close-up of a gulllabel{fig:gull}}</p>
+<div class="section" id="adopted-from-https-en-wikibooks-org-wiki-latex-labels-and-cross-referencing">
+<h4>1.26.1 Adopted from <a class="reference external" href="https://en.wikibooks.org/wiki/LaTeX/Labels_and_Cross-referencing">https://en.wikibooks.org/wiki/LaTeX/Labels_and_Cross-referencing</a><a class="headerlink" href="#adopted-from-https-en-wikibooks-org-wiki-latex-labels-and-cross-referencing" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+<div class="section" id="how-to-use-times-new-roman-fonts-in-latex">
+<h3><a class="toc-backref" href="#id49">1.27 How to Use Times New Roman Fonts in Latex?</a><a class="headerlink" href="#how-to-use-times-new-roman-fonts-in-latex" title="Permalink to this headline">¶</a></h3>
+<p>usepackage{fontspec}
+setmainfont{Times New Roman}</p>
+<p>Note that for this to work, you need to compile with LuaLatex or XeLateX</p>
+</div>
+<div class="section" id="latex-line-and-page-breaking">
+<h3><a class="toc-backref" href="#id50">1.28 Latex Line and Page Breaking</a><a class="headerlink" href="#latex-line-and-page-breaking" title="Permalink to this headline">¶</a></h3>
+<p>The first thing LaTeX does when processing ordinary text is to translate your input file into a string of glyphs and spaces. To produce a printed document, this string must be broken into lines, and these lines must be broken into pages. In some environments, you do the line breaking yourself with the \\ command, but LaTeX usually does it for you. The available commands are</p>
+<p>\\ start a new paragraph.
+\\* start a new line but not a new paragraph.
+\- OK to hyphenate a word here.
+cleardoublepage flush all material and start a new page, start new odd numbered page.
+clearpage plush all material and start a new page.
+hyphenation enter a sequence pf exceptional hyphenations.
+linebreak allow to break the line here.
+newline request a new line.
+newpage request a new page.
+nolinebreak no line break should happen here.
+nopagebreak no page break should happen here.
+pagebreak encourage page break.</p>
+<p>Information is adapted from <a class="reference external" href="http://www.personal.ceu.hu/tex/breaking.htm">http://www.personal.ceu.hu/tex/breaking.htm</a>.</p>
+</div>
+<div class="section" id="putting-figures-side-by-side-using-minipage">
+<h3><a class="toc-backref" href="#id51">1.29 Putting Figures Side-By-Side Using Minipage</a><a class="headerlink" href="#putting-figures-side-by-side-using-minipage" title="Permalink to this headline">¶</a></h3>
+<p>The minipage is often used to put things next to each other, which can otherwise be hard put together. For example, two pictures side by side, two tables next to a text or a picture or vice versa. The idea behind the minipage command is that within an existing page “built in” an additional page. By this one has the opportunity to use this new page, for example, set two pictures side by side, then just set two minipages side by side. Here than in Figure 1 is set in the first and Figure 2 in the second minipage.</p>
+<p>A mistake that is often made is, there is a blank line between the end{minipage} and begin{minipage} left. Then the pages are no longer together.</p>
+<div class="section" id="id8">
+<h4><a class="toc-backref" href="#id52">1.29.1 Examples</a><a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
+<p>Put three pictures side by side, where you should set the width of the image using width = textwidth, if they are too wide.</p>
+<p>With minipage also text can be put next to an image, this also can be implemented by the usepackage sidecap.</p>
+<p>Two tables next to each other:</p>
+<p>Two figures side by side another example.</p>
+</div>
+<div class="section" id="references">
+<h4><a class="toc-backref" href="#id53">1.29.2 References:</a><a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="http://www.sascha-frank.com/latex-minipage.html">http://www.sascha-frank.com/latex-minipage.html</a></p>
+</div>
+</div>
+<div class="section" id="use-cleveref-for-giving-references-to-multiple-figures">
+<h3><a class="toc-backref" href="#id54">1.30 Use Cleveref for giving references to multiple figures</a><a class="headerlink" href="#use-cleveref-for-giving-references-to-multiple-figures" title="Permalink to this headline">¶</a></h3>
+<p>Check this website <a class="reference external" href="https://texblog.org/2013/05/06/cleveref-a-clever-way-to-reference-in-latex/">https://texblog.org/2013/05/06/cleveref-a-clever-way-to-reference-in-latex/</a></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, sbilmis.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
