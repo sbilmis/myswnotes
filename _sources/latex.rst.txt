@@ -4,7 +4,7 @@ Software Notes
 
     :Author: sbilmis
 
-.. contents::
+
 
 1 LateX
 -------
